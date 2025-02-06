@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.menubalkclass{
+    background-color: red;
+    height: 7vw;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header{
+    width: 20px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.hero {
+    background-image: url('/img/id6Faiz3VZ_1738761068432.jpeg'); /* Voeg hier je eigen afbeelding URL in */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    text-align: center;
+    padding: 100px 0px; /* Ruimte boven en onder de tekst */
+    height: 50vw;
+  }
+  
+  .hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 0px;
+  }
+  
+  .hero-content p {
+    font-size: 20px;
+    font-weight: 300;
+  }
