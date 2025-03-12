@@ -3,62 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn Website</title>
+    <title>Website met Vlakken</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+    <div class="introductie">
+        <p>Hallo, welkom op het portofolio van Ruben Kaptein.</p><br>
+        <h4>Klik op één van de vaardigheden hieronder van Ruben of scroll naar onderen om meegenomen te worden in het portofolioverhaal. </h4>
+    </div>
+    <div class="nav-container">
+        <a href="#GIS" class="nav-item" style="background-image: url('/img/Kaart.jpg');">
+            <button>GIS</button>
+        </a>
+        <a href="#Vormgeving" class="nav-item" style="background-image: url('/img/design.JPG');">
+            <button>Vormgeving</button>
+        </a>
+        <a href="#Webmapping" class="nav-item" style="background-image: url('/img/webmap.jpg');">
+            <button>Webmapping</button>
+        </a>
+        <a href="#Geodesign" class="nav-item" style="background-image: url('/img/geodesign.jpg');">
+            <button>Geodesign</button>
+        </a>
+    </div>
 
-   
-<nav class="menubalkclass">
-        <button id="Homebutton">Home</button>
-        <button id="introductiebutton">Introductie</button>
-        <button id="projectenbutton">Projecten</button>
-        <button id="contactbutton">Contact</button>
-    </nav>
+    <div id="GIS" class="section">Gis vlak</div>
+    <div id="Vormgeving" class="section">Vormgeef vak</div>
+    <div id="Webmapping" class="section">Webmap vak</div>
+    <div id="Geodesign" class="section">Geodesign vak</div>
 
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+    <div id="mapLibre"></div>
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
 
-<header class="header">
-        <div class="header-image"></div> <!-- Hier kan een afbeelding komen -->
-        <div class="header-tekst">
-            <h1>Welkom</h1>
-            <p>Korte introductie over de website.</p>
-        </div>
-    </header>
-
-<div class="w3-container">
-        <h2>Slideshow Indicators</h2>
-        <p>Using images to indicate how many slides there are in the slideshow, and highlight the image the user is currently viewing.</p>
-      </div>
-      
-      <div class="w3-content" style="max-width:1200px">
-        <img class="mySlides" src="/img/id6Faiz3VZ_1738761068432.jpeg" style="width:100%;display:none">
-        <img class="mySlides" src="/img/id6Faiz3VZ_1738761068432.jpeg" style="width:100%">
-        <img class="mySlides" src="/img/id6Faiz3VZ_1738761068432.jpeg" style="width:100%;display:none">
-      
-        <div class="w3-row-padding w3-section">
-          <div class="w3-col s4">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="/img/id6Faiz3VZ_1738761068432.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
-          </div>
-          <div class="w3-col s4">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="/img/id6Faiz3VZ_1738761068432.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
-          </div>
-          <div class="w3-col s4">
-            <img class="demo w3-opacity w3-hover-opacity-off" src="/img/id6Faiz3VZ_1738761068432.jpeg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
-          </div>
-        </div>
-</div>
-   
-
-    <!-- footer ding voor contactinfo -->
     <footer class="footer">
         <button>Optie 1</button>
         <button>Optie 2</button>
         <button>Optie 3</button>
     </footer>
-
-    <script src="/javascript/javascript.js"></script>
-    
-        
 </body>
 </html>

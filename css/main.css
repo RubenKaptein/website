@@ -2,93 +2,101 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-/* Navigatiebalk */
-.menubalkclass {
-  background-color: black;
-  height: 7vw;
+h1 {
+  font-family: Raleway;
+}
+
+h2 {
+  font-family: montserrat thin;
+}
+
+h3 {
+  font-family: montserrat;
+  font-size: medium;
+}
+
+h4{
+  font-family: montserrat thin;
+  font-size: small;
+}
+p {
+  font-family: montserrat;
+  font-size: small;
+}
+
+.introductie {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  background-color: #f0f0f0;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0% 0% 0% 0%;
+}
+
+.nav-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  width: 100vw;
+  height: 65vh;
+  
 }
 
-.menubalkclass button {
-  background-color: black;
+.nav-item {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-item button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   border: none;
-  padding: 10px 20px;
+  cursor: pointer;
   font-size: 16px;
+  margin: 20px 20px 20px 20px;
 }
 
-/* Header sectie */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+.nav-item button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-.header-image {
-  width: 50%;
-  height: 200px;
-  background-color: gray; /* Placeholder voor afbeelding */
-}
-
-.header-tekst {
-  width: 40%;
-  padding: 20px;
-  border: 2px solid black;
-}
-
-/* Slideshow-container vult de hele breedte en hoogte */
-.w3-content {
-  max-width: 100%;
-  height: 80vh; /* Zorgt ervoor dat het 80% van het scherm vult */
-  position: relative;
-  overflow: hidden; /* Voorkomt dat verborgen afbeeldingen ruimte innemen */
-}
-
-/* Slideshow-afbeeldingen vullen de container volledig */
-.mySlides {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Zorg ervoor dat de eerste afbeelding zichtbaar is bij laden */
-.mySlides:first-child {
-  display: block;
-}
-
-/* Miniatuurafbeeldingen in de indicatoren */
-.w3-row-padding {
+.section {
+  height: 100vh;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.w3-row-padding img {
-  width: 100px; /* Kleinere thumbnails */
-  height: auto;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s ease-in-out;
-}
+#GIS { background-color: lightblue; }
 
-.w3-row-padding img:hover {
-  opacity: 1;
-}
+#Vormgeving { background-color: lightcoral; }
 
-/* Hero sectie */
-.hero {
+#Webmapping { background-color: lightgreen; }
+
+#Geodesign { background-color: lightgoldenrodyellow; }
+
+#map, #mapLibre {
   width: 100%;
-  height: 50vw;
-  background-color: lightgray; /* Placeholder voor afbeelding */
+  height: 500px;
+  margin-bottom: 20px;
 }
 
-/* Footer */
 .footer {
   display: flex;
   justify-content: center;

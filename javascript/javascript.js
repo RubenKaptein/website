@@ -1,59 +1,23 @@
-var button = document.querySelector("#contact")
+var mapLibre = new maplibregl.Map({
+  container: 'mapLibre',
+  style: 'https://tiles.stadiamaps.com/styles/osm_bright.json',
+  center: [5.6018, 52.6624],
+  zoom: 13
+});
 
-button.addEventListener("click", myfunction)
-
-function myfunction()
-{
-    alert("Mail: kapteinstudios@gmail.com\nTelefoonnummer: +31 6 27518455")
-}
+new maplibregl.Marker()
+  .setLngLat([5.6018, 52.6624])
+  .setPopup(new maplibregl.Popup().setText('Fitis 34'))
+  .addTo(mapLibre);
 
 
-// w3schools slider
 
-  function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-    }
-    x[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " w3-opacity-off";
-  }
-
-  let slideIndex = 1;
-showDivs(slideIndex);
-
-// Functie om naar een specifieke slide te gaan
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-// Functie om de slides te tonen/verbergen
-function showDivs(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-
-  // Verberg alle slides
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  // Maak alle indicator-afbeeldingen minder zichtbaar
-  for (i = 0; i < dots.length; i++) {
-    dots[i].style.opacity = "0.6";
-  }
-
-  // Toon de actieve slide en highlight de geselecteerde indicator
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].style.opacity = "1";
-}
+ var map = L.map('map').setView([52.350784, 5.264702], 13); 
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        L.marker([52.350784, 5.264702]).addTo(map)
+            .bindPopup('Aeres Hogeschool, Almere')
+            .openPopup();
