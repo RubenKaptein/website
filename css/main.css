@@ -6,11 +6,13 @@
 }
 
 h1 {
-  font-family: Raleway;
+  font-family: montserrat;
+  font-size: x-large;
 }
 
 h2 {
-  font-family: montserrat thin;
+  font-family: montserrat;
+  font-size: medium;
 }
 
 h3 {
@@ -18,10 +20,18 @@ h3 {
   font-size: medium;
 }
 
-h4{
-  font-family: montserrat thin;
+h4 {
+  font-family: montserrat;
   font-size: small;
+  padding: 25px;
 }
+
+h5{
+  font-family: montserrat thin;
+  font-size: x-small;
+  color: whitesmoke;
+}
+
 p {
   font-family: montserrat;
   font-size: small;
@@ -37,6 +47,16 @@ p {
   margin: 0% 0% 0% 0%;
 }
 
+.intro {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
 .nav-container {
   display: flex;
   width: 100vw;
@@ -50,10 +70,21 @@ p {
   background-size: cover;
   background-position: center;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-.nav-item:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+.nav-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.nav-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Deze regel zorgt ervoor dat het vak donkerder wordt */
 }
 
 .nav-item button {
@@ -67,11 +98,12 @@ p {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  margin: 20px 20px 20px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-item button:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+.nav-item:hover button {
+  background-color: transparent; /* Maak de achtergrond transparant bij hover */
+  color: white; /* Zorg ervoor dat de tekst wit blijft */
 }
 
 .section {
@@ -83,14 +115,36 @@ p {
   font-weight: bold;
 }
 
+#toelichtingbalk{
+  background-color: #000000;
+  
+  height: 5vw;
+  color: white;
+  text-align: center;
+}
+
 #GIS { background-color: lightblue; }
 
 #Vormgeving { background-color: lightcoral; }
 
 #Webmapping { background-color: lightgreen; }
 
-#Geodesign { background-color: lightgoldenrodyellow; }
+#Geodesign { 
+  background-color: lightgoldenrodyellow;
+  text-align: center; }
 
+#fotoshoutribsluis{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fotoshoutribsluis img{
+  max-width: 100px;
+  height: 100px;
+  
 #map, #mapLibre {
   width: 100%;
   height: 500px;

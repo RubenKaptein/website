@@ -5,31 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website met Vlakken</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Forum&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="introductie">
-        <p>Hallo, welkom op het portofolio van Ruben Kaptein.</p><br>
-        <h4>Klik op één van de vaardigheden hieronder van Ruben of scroll naar onderen om meegenomen te worden in het portofolioverhaal. </h4>
+    <div class="intro">
+        <h2>Ruben Kaptein portofolio</h2>
     </div>
     <div class="nav-container">
         <a href="#GIS" class="nav-item" style="background-image: url('/img/Kaart.jpg');">
+            <div class="overlay"></div>
             <button>GIS</button>
         </a>
         <a href="#Vormgeving" class="nav-item" style="background-image: url('/img/design.JPG');">
+            <div class="overlay"></div>
             <button>Vormgeving</button>
         </a>
         <a href="#Webmapping" class="nav-item" style="background-image: url('/img/webmap.jpg');">
+            <div class="overlay"></div>
             <button>Webmapping</button>
         </a>
         <a href="#Geodesign" class="nav-item" style="background-image: url('/img/geodesign.jpg');">
+            <div class="overlay"></div>
             <button>Geodesign</button>
         </a>
     </div>
+    <div id="toelichtingbalk"><h4>Dit zijn de vaardigheden die student Ruben heeft geleerd in de les van Niene Boeijen voor het vak HGAV07 Specialisatie geodesign aan Aeres Hogeschool.<br> Kies een van de vaardigheden om deze te ontdekken</h4></div>
 
-    <div id="GIS" class="section">Gis vlak</div>
-    <div id="Vormgeving" class="section">Vormgeef vak</div>
-    <div id="Webmapping" class="section">Webmap vak</div>
-    <div id="Geodesign" class="section">Geodesign vak</div>
+    <div id="GIS" class="section">Welkom bij onze website! Hier lees je alles over ons.</div>
+    <div id="Vormgeving" class="section">Onze diensten zijn speciaal ontworpen om jou te helpen.</div>
+    <div id="Webmapping" class="section"><h1>Webmapping</h1><br><br><h3>Html, css en javascript<br><br> Webmapping is een engelse term voor het proces van maken, designen en opleveren van een kaart op het internet. Denk bijvoorbeeld aan Google Maps. Om een webmap te kunnen bouwen, heb je drie onderdelen nodig.<br> 1. GIS: de kaart<br> 2. Het web: HTML, CSS, Javascript and API's om de kaart te renderen. <br> 3. Data bronnen: de informatie die je wil laten zien op de kaart.<br> <br> Als voorbeeld, zie je hieronder twee kaarten in deze website als demonstratie.</h3></div>
+    <div id="Geodesign" class="section"><h1>Geodesign</h1><br><br><h3>Kaarten maken heeft te maken met data, visualiseren en locaties.<br><br>
+
+        Je kan het onderverdelen in 3 categorieën: 1. kaart  2. visualisatie 3. data
+        
+        Mensen interpreteren kaarten op basis van eigen ervaringen en historie
+        
+        K.I. geeft kleurrijke plaatjes met veel details, hij ziet geodesigners en het vak van kaartenmaken als een iets meer
+         verouderde wetenschap, maar onderwerpen als kunst, visualisaties en 3D als springlevend vol futuristische beelden.
+        
+        Denk na over de betrouwbaarheid van de antwoorden van kunstmatige intelligentie.
+            </h3><div id="fotoshoutribsluis"><img src="/img/1images.jpg"><img src="/img/2images.webp"><img src="/img/3images.jpeg"><img src="/img/4images.jpg"></div></div>
 
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
