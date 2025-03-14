@@ -26,7 +26,7 @@ h4 {
   padding: 25px;
 }
 
-h5{
+h5 {
   font-family: montserrat thin;
   font-size: x-small;
   color: whitesmoke;
@@ -61,7 +61,6 @@ p {
   display: flex;
   width: 100vw;
   height: 65vh;
-  
 }
 
 .nav-item {
@@ -115,12 +114,13 @@ p {
   font-weight: bold;
 }
 
-#toelichtingbalk{
+#toelichtingbalk {
   background-color: #000000;
-  
-  height: 5vw;
+  height: auto; /* Zorg ervoor dat de hoogte automatisch wordt aangepast aan de inhoud */
   color: white;
   text-align: center;
+  padding: 10px 20px; /* Voeg padding toe om de tekst niet tegen de randen te laten komen */
+  box-sizing: border-box; /* Zorg ervoor dat padding wordt meegerekend in de totale hoogte en breedte */
 }
 
 #GIS { background-color: lightblue; }
@@ -129,26 +129,47 @@ p {
 
 #Webmapping { background-color: lightgreen; }
 
-#Geodesign { 
+#Geodesign {
   background-color: lightgoldenrodyellow;
-  text-align: center; }
+  text-align: center;
+}
 
-#fotoshoutribsluis{
-  width: 100px;
-  height: 100px;
+#fotoshoutribsluis {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px; /* Voeg wat ruimte toe tussen de afbeeldingen */
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  padding: 20px;
 }
 
-#fotoshoutribsluis img{
-  max-width: 100px;
-  height: 100px;
-  
+#fotoshoutribsluis img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  margin: 20px 0;
+}
+
 #map, #mapLibre {
   width: 100%;
-  height: 500px;
-  margin-bottom: 20px;
+  height: 100%;
 }
 
 .footer {

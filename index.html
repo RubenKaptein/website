@@ -6,8 +6,10 @@
     <title>Website met Vlakken</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Forum&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Forum&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="intro">
@@ -31,28 +33,34 @@
             <button>Geodesign</button>
         </a>
     </div>
-    <div id="toelichtingbalk"><h4>Dit zijn de vaardigheden die student Ruben heeft geleerd in de les van Niene Boeijen voor het vak HGAV07 Specialisatie geodesign aan Aeres Hogeschool.<br> Kies een van de vaardigheden om deze te ontdekken</h4></div>
+    <div id="toelichtingbalk"><h4>Dit zijn de vaardigheden die student Ruben heeft geleerd in de les van Niene Boeijen voor het vak HGAV07 Specialisatie geodesign aan Aeres Hogeschool.<br> Kies een van de vaardigheden om deze te ontdekken. <br><br> De pagina is een one-page, dus hieronder vindt u ook de vaardigheden op volgorde. </h4></div>
 
     <div id="GIS" class="section"><h1>GIS</h1><br><br><h3>De kunst van kaartenmaken<br><br> GIS staat voor Geo informatie systeem.</h3></div></div>
+    
     <div id="Vormgeving" class="section"><h1>Vormgeving</h1><br><br><h3>Het vormgeven van media-uitingen<br><br> GIS staat voor Geo informatie systeem.</h3></div></div>
-    <div id="Webmapping" class="section"><h1>Webmapping</h1><br><br><h3>Html, css en javascript<br><br> Webmapping is een engelse term voor het proces van maken, designen en opleveren van een kaart op het internet. Denk bijvoorbeeld aan Google Maps. Om een webmap te kunnen bouwen, heb je drie onderdelen nodig.<br> 1. GIS: de kaart<br> 2. Het web: HTML, CSS, Javascript and API's om de kaart te renderen. <br> 3. Data bronnen: de informatie die je wil laten zien op de kaart.<br> <br> Als voorbeeld, zie je hieronder twee kaarten in deze website als demonstratie.</h3></div>
-    <div id="Geodesign" class="section"><h1>Geodesign</h1><br><br><h3>Kaarten maken heeft te maken met data, visualiseren en locaties.<br><br>
+    <div id="Webmapping" class="section"><h1>Webmapping</h1><br><br><h3>Html, css en javascript<br><br> Webmapping is een engelse term voor het proces van maken, designen en opleveren van een kaart op het internet. Denk bijvoorbeeld aan Google Maps. Om een webmap te kunnen bouwen, heb je drie onderdelen nodig.<br> 1. GIS: de kaart<br> 2. Het web: HTML, CSS, Javascript and API's om de kaart te renderen. <br> 3. Data bronnen: de informatie die je wil laten zien op de kaart.<br> <br> Als voorbeeld, zie je hieronder twee kaarten in deze website als demonstratie.</h3>
+        <div class="map-wrapper">
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+            <div class="map-container">
+                <div id="mapLibre"></div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <script src="/javascript/javascript.js"></script>
+
+    <div id="Geodesign" class="section"><h1>Geodesign</h1><br><br><h3>Kaarten maken heeft te maken met data, visualiseren en locaties.<br><br>
         Je kan het onderverdelen in 3 categorieën: 1. kaart  2. visualisatie 3. data
-        
         Mensen interpreteren kaarten op basis van eigen ervaringen en historie
-        
         K.I. geeft kleurrijke plaatjes met veel details, hij ziet geodesigners en het vak van kaartenmaken als een iets meer
          verouderde wetenschap, maar onderwerpen als kunst, visualisaties en 3D als springlevend vol futuristische beelden.
-        
         Denk na over de betrouwbaarheid van de antwoorden van kunstmatige intelligentie.
-            </h3><div id="fotoshoutribsluis"><img src="/img/1images.jpg"><img src="/img/2images.webp"><img src="/img/3images.jpeg"><img src="/img/4images.jpg"></div></div>
-
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <div id="mapLibre"></div>
-    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    </h3>
+    <div id="fotoshoutribsluis"><img src="/img/1images.jpg"><img src="/img/2images.webp"><img src="/img/3images.jpeg"><img src="/img/4images.jpg"></div></div>
 
     <footer class="footer">
         <button>Optie 1</button>
