@@ -125,7 +125,8 @@ p {
 
 #GIS { background-color: lightblue; }
 
-#Vormgeving { background-color: lightcoral; }
+#Vormgeving { background-color: lightcoral;
+overflow: hidden; }
 
 #Webmapping { background-color: lightgreen; }
 
@@ -140,14 +141,14 @@ p {
   align-items: center;
   gap: 10px; /* Voeg wat ruimte toe tussen de afbeeldingen */
   width: 100%;
-  height: auto;
+  max-height: 100%;
   overflow: visible;
   padding: 20px;
 }
 
 #fotoshoutribsluis img {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
   display: block;
 }
 
