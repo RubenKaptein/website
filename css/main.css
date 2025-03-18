@@ -23,7 +23,10 @@ h3 {
 h4 {
   font-family: montserrat;
   font-size: small;
-  padding: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  padding-top: 10px;
 }
 
 h5 {
@@ -123,33 +126,45 @@ p {
   box-sizing: border-box; /* Zorg ervoor dat padding wordt meegerekend in de totale hoogte en breedte */
 }
 
-#GIS { background-color: lightblue; }
+#GIS { 
+  background-color: lightblue;
+  flex-direction: column;
+}
 
-#Vormgeving { background-color: lightcoral;
-overflow: hidden; }
+#Vormgeving {
+  background-color: lightcoral;
+  overflow: hidden;
+  flex-direction: column;
+}
 
-#Webmapping { background-color: lightgreen; }
+#Webmapping { 
+  background-color: lightgreen;
+  overflow: hidden;
+  flex-direction: column;
+ }
 
 #Geodesign {
   background-color: lightgoldenrodyellow;
   text-align: center;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 #fotoshoutribsluis {
   display: flex;
+  position: relative;
   justify-content: center;
-  align-items: center;
-  gap: 10px; /* Voeg wat ruimte toe tussen de afbeeldingen */
-  width: 100%;
-  max-height: 100%;
-  overflow: visible;
-  padding: 20px;
+  gap: 10px;
+  max-width: 100%;
+  max-height: 30%;
+  overflow: hidden;
+  
 }
 
 #fotoshoutribsluis img {
   max-width: 100%;
   max-height: 100%;
-  display: block;
+  overflow: hidden;
 }
 
 .map-wrapper {
