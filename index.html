@@ -3,71 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website met Vlakken</title>
+    <title>Portfolio Ruben Kaptein - Geodesign</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Ruben Kaptein - Geodesign</title>
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Forum&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@terraformer/wkt@1.2.0/dist/browser/terraformer-wkt-parser.min.js"></script>
+    <script src="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/terraformer/1.0.0/terraformer.min.js"></script>
+
 </head>
+
 <body>
-    <div class="intro">
-        <h2>Ruben Kaptein portofolio</h2>
-    </div>
-    <div class="nav-container">
-        <a href="#GIS" class="nav-item" style="background-image: url('./img/Kaart.jpg');">
-            <div class="overlay"></div>
-            <button>GIS</button>
-        </a>
-        <a href="#Vormgeving" class="nav-item" style="background-image: url('./img/design.JPG');">
-            <div class="overlay"></div>
-            <button>Vormgeving</button>
-        </a>
-        <a href="#Webmapping" class="nav-item" style="background-image: url('./img/webmap.jpg');">
-            <div class="overlay"></div>
-            <button>Webmapping</button>
-        </a>
-        <a href="#Geodesign" class="nav-item" style="background-image: url('./img/geodesign.jpg');">
-            <div class="overlay"></div>
-            <button>Geodesign</button>
-        </a>
-    </div>
-    <div id="toelichtingbalk"><h4>Dit zijn de vaardigheden die student Ruben heeft geleerd in de les van Niene Boeijen voor het vak HGAV07 Specialisatie geodesign aan Aeres Hogeschool.<br> Kies een van de vaardigheden om deze te ontdekken. <br><br> De pagina is een one-page, dus hieronder vindt u ook de vaardigheden op volgorde. </h4></div>
+    <header>
+        <nav id="main-nav">
+            <div class="logo">Ruben Kaptein</div>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#les1">Les 1</a></li>
+                <li><a href="#les2">Les 2</a></li>
+                <li><a href="#les3">Les 3</a></li>
+                <li><a href="#les4">Les 4</a></li>
+                <li><a href="#les5">Les 5</a></li>
+                <li><a href="#les6">Les 6</a></li>
+                <li><a href="#les7">Les 7</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div id="GIS" class="section"><h1>GIS</h1><br><br><h3>De kunst van kaartenmaken<br><br> GIS staat voor Geo informatie systeem.</h3></div></div>
-    
-    <div id="Vormgeving" class="section"><h1>Vormgeving</h1><br><br><h3>Het vormgeven van media-uitingen is een kunst opzich, waar elke keuze telt. Zo bijvoorbeeld wordt een huis in Nederland getekend als een strak blok met een punten dak, terwijl in het Middel-Oosten een huis wordt afgebeeld met een plat dak en koepels. De keuzes bij het vormgeven bepalen hoe effectief de boodschap kan worden overgebracht naar de doelgroep. In de lessen hebben we geleerd over een aantal opties voor deze keuzes.<br><br> Bertin & gestalt.<br><br> Bertin was een Franse kartograaf die een boek schreef (Sémiologie Graphique (1967)
+    <main>
+        <section id="intro" class="intro-section">
+            <div class="container">
+				
+                <h1>Portfolio Geodesign</h1>
+                <div class="intro-content">
+                    <p>Ruben Kaptein (22) is een derdejaarsstudent aan Aeres Hogeschool die het vak HGAV07 Geodesign gevolgd heeft bij docent Niene Boeijen. Deze portfolio-website toont zijn reflecties op de lessen, onderverdeeld in thema's zoals Geodesign, webmapping en vormgeving. Deze website is gemaakt met inhoud uit de lessen en kunstmatige intelligentie.<br><br> Kies een van de volgende thema's om verder te gaan of scrol naar onderen. <br>De website is een one-page.</p>
+                </div>
+            </div>
+        </section>
+		
+		<div class="nav-container">
+            <div class="nav-item" style="background-image: url('./img/geodesign.jpg');">
+                <div class="overlay"></div>
+                <button onclick="scrollToSection('les1')">Geodesign</button>
+            </div>
+            <div class="nav-item" style="background-image: url('./img/webmap.jpg');">
+                <div class="overlay"></div>
+                <button onclick="scrollToSection('les3')">Webmapping</button>
+            </div>
+            <div class="nav-item" style="background-image: url('./img/bertin.png');">
+                <div class="overlay"></div>
+                <button onclick="scrollToSection('les5')">Vormgeving</button>
+            </div>
+  </div>
 
- over het visualiseren van informatie. Hij schreef zelf regels met het doel om visuele elementen te gebruiken om een betekenis over te brengen.<br><br>Deze regels bestaan uit zeven punten, namelijk de grootte, kleurwaarde, textuur, kleur(toon), oriëntatie en vorm. In de afbeelding hieronder zie je een voorbeeld van de impact van deze regels op symbolen.<br><br> <img src="/img/bertin.png" height="300px"><br>afbeelding van Bertin<br><br>De theorie van Bertin gaat hand in hand met meetniveau's. Meetniveau's beschrijven hoe data gemeten en gecategoriseerd word en is opgedeeld in 4 typen: nominaal, ordinaal, interval en ratio.<br><br><img src="/img/meetniveau.png" height="300px"><br>afbeelding van meetniveau's</h3></div></div>
-    <div id="Webmapping" class="section"><h1>Webmapping</h1><br><br><h3>Html, css en javascript<br><br> Webmapping is een engelse term voor het proces van maken, designen en opleveren van een kaart op het internet. Denk bijvoorbeeld aan Google Maps. Om een webmap te kunnen bouwen, heb je drie onderdelen nodig.<br> 1. GIS: de kaart<br> 2. Het web: HTML, CSS, Javascript and API's om de kaart te renderen. <br> 3. Data bronnen: de informatie die je wil laten zien op de kaart.<br> <br> Als voorbeeld, zie je hieronder twee kaarten in deze website als demonstratie.</h3>
-        <div class="map-wrapper">
-            <div class="map-container">
-                <div id="map"></div>
+        <section id="les1" class="lesson-section">
+            <div class="container">
+				<h4>Geodesign</h4>
+                <h2>Les 1: Cartografie en kaarten</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                            Tijdens het vak zijn we dieper in gegaan op de betekenis kaarten maken, het is een combinatie van data, visualisatie en locaties. We bespraken met onze groep hoe kaarten door de geschiedenis heen zijn geëvolueerd, van de Babylonische kaart (600 v.Chr. of zelfs 2300 v.Chr.) tot moderne GIS-systemen, en hoe mensen ze interpreteren op basis van hun eigen ervaringen en context. Verder, hebben we ook de begrippen in het vakgebied van Geodesign onderzocht.<br><br>
+Onze taak was om als individu termen verwant met Geodesign op te zoeken en te laten visualiseren door kunstmatige intelligentie. Ik moest reflecteren op definities van geodesign en hoe kunstmatige intelligentie daar tegenaan keek, hoe kaarten zowel een symbolische als praktische rol spelen, en hoe technologie, kunst en wetenschap hierin samenkomen. Dit wilde ik vormgeven in een tijdlijn, omdat ik in dat deel van de les het meest geintresseerd was en dus het meest van herinnerde.
+<br><br>
+Ik begon met het opzoeken van historische kaarten, zoals de Babylonische kaart, die een ethnocentrisch wereldbeeld toont met Babylon als middelpunt. Dit koppelde ik aan Bijbelse en seculiere contexten, zoals de rivieren Tigris en Eufraat. Vervolgens heb ik geprobeerd de 'main-take-away' en dus de geschiedenis van kaarten te visualiseren: van mythe en versiering in Egypte en de Middeleeuwen (bijv. de Hereford Mappae Mundi), naar wetenschappelijke precisie met navigatiegereedschappen en pioniers als Cassini, tot de digitale revolutie met GIS en satellietbeelden. In deze foto hiernaast zie je de periodes uitgelicht, met aandacht voor de combinatie van kunst, wetenschap en technologie.
+<br><br>
+Het resultaat was een tijdlijn die de ontwikkeling van kaarten maken helder in beeld bracht. Het liet zien hoe kaarten ooit symbolisch waren, zoals de Babylonische kaart, en later geografisch accuraat werden door geodesie en digitale tools. Wat tot mij spreekt, omdat wij als Geo, media en designers meer als verbindingspersonen worden gezien. We weten van alle markten iets af, zodat we verandering kunnen brengen in de GIS wereld die zo technisch is en overal Arcgis instant apps voor gebruikt om producten te visualiseren. Ik merkte ook een opleving van artistieke elementen in moderne kaarten, zoals deep mapping en participatieve ontwerpen, wat het vak nog weer meer levendig maakt. Echter, met de komst van K.I. is het de vraag hoelang de nieuwe opleving die opkomst is van het artistieke nog zal duren. 
+<br><br>
+Deze opdracht heeft me geleerd hoe kaarten meer zijn dan alleen geografische visualisaties; ze vertellen een verhaal over cultuur, technologie en de makers. Het is heel lastig om een objectieve kaart te maken, omdat je op een bepaalde manier een locatie wil vormgeven. Bijvoorbeeld, kan je een projectie gebruiken waardoor een land groter lijkt of kleuren gebruiken die een meer positieve associatie hebben dan andere kleuren in de locaties eromheen. Ik vondhet meest interessante hoe de Babylonische kaart zowel symbolisch als historisch interpreteerbaar is, wat me deed nadenken over de betrouwbaarheid van bronnen – zelfs K.I. kan subjectief zijn, omdat het werkt op de data die hem voorgeschoteld wordt. Bij het maken van de tijdlijn dwong me om onderzoek te doen over de inhoud over geschiedenis en design te combineren, wat mijn achtergrondkennis over kaarten maken heeft versterkt. Volgende keer wil ik twee dingen verbeteren, en dat is één het beeldmateriaal wat ik in de les gemaakt had dus een Powerpoint presentatie met foto's van twee verschillende K.I. terug laten komen op deze website. En twee, een betere legenda maken voor mijn tijdlijn, want ik heb nu bij het technische gedeelte wetenschappelijk gezet. Maar daar zou beter 18e eeuw kunnen staan, omdat in die periode Cassini in Frankrijk een gedetailleerde en systematische kaart maakte met landmetingen. Een kenmerkende verandering door kaarten zo nauwkeurig mogelijk te maken.
+<br><br>Dit was een best leuke les, ondanks dat mijn verwachtingen anders waren door een terugkomdag van de opleiding intern. Alleen ik denk wel dat we dit vak veel eerder hadden moeten krijgen, omdat we nu al soortgelijke vakken hebben gehad waar we al deze kennis al hadden kunnen gebruiken.
+
+
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        
+                        <img src="./img/definities.png" class="lesson-image">
+                        <img src="./img/definities2.png" class="lesson-image">
+                        <img src="./img/geodesign tijdbalk no background.png" class="lesson-image">
+                    </div>
+                </div>
             </div>
-            <div class="map-container">
-                <div id="mapLibre"></div>
+        </section>
+
+        <section id="les2" class="lesson-section">
+            <div class="container">
+                <h4>Geodesign</h4>
+                <h2>Les 2: Web ontwikkeling en Design</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                           Omdat ik merk dat ik in de eerste paragraaf redelijk veel tekst heb geschreven, zal ik proberen wat korter en bondiger te zijn in mijn reflecties.
+                           <br><br>
+                            In de tweede les hebben we geleerd over de basisprincipes van webontwikkeling en design. 
+                            We hebben geoefend met HTML, CSS en JavaScript om een interactieve webpagina te maken. 
+                            De docent heeft ons uitgelegd hoe we elementen kunnen positioneren, stijlen en animeren om een website te maken.
+                            <br><br>
+                            Door deze vaardigheden te leren, heb ik een beter begrip gekregen van hoe websites in elkaar steken en hoe ik ze kan aanpassen aan mijn eigen behoeften. Ook heb ik veel geleerd van de JavaScript inhoud, want dat was weggezakt.
+                            Het meeste css kon ik nog wel herinneren, omdat we al eerder een vak hebben gehad genaamd "HWUD" hierover hebben gehad. De opdracht die we in deze les hebben uitgevoerd is het maken van een wireframe voor je website. 
+                            Dit is een soort snelle schets van je website, waarbij je de indeling en de structuur van de website vastlegt. <br><br>
+                            Dankzij mijn voorkennis wist ik al dat wireframing een belangrijke stap was in het proces, omdat je de gemaakte keuzes in die stap kan verantwoorden. 
+                            En dat het was op te verdelen is in twee delen, low-fidelity en high-fidelity. Low-fidelity is een snelle schets, terwijl high-fidelity een gedetailleerde schets is.
+                            <br><br>
+                            Omdat ik dit wist heb ik al eerst een low-fidelity wireframe gemaakt.
+                            Maar het werd al snel duidelijk dat de website een gereedschap is om informatie over te brengen. 
+                            En als je dat dus zelf kan vormgeven, kun je de indeling daarop aanpassen.  Hierom heb ik meerdere schetsen gemaakt. Dit is denk ik het belangrijkste wat ik geleerd heb in deze les.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/mockuplowfi.jpg" class="lesson-image">
+                        <img src="./img/wireframing.jpg" class="lesson-image">
+                        <img src="./img/wireframing2.jpg" class="lesson-image">
+                        <img src="./img/wireframing3.jpg" class="lesson-image">
+                        <img src="./img/wireframing4.jpg" class="lesson-image">
+                        <img src="./img/wireframing5.jpg" class="lesson-image">
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="les3" class="lesson-section">
+            <div class="container">
+                <h4>Webmapping</h4>
+                <h2>Les 3: Web Maps</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                            
+                            In de derde les zijn we bezig geweest met webmapping. We hebben webkaarten van MapLibre en Leaflet uitgeprobeerd. Het meest waardevolle wat ik hier mocht leren van Niene is hoe API's werken.
+                            Blijkbaar is de API een manier om met een server te praten en als hij terugpraat, kan je dat gebruiken om informatie op te halen van de server en te tonen op je website. 
+                            Ook belangrijk is, dat je dus openbare en gesloten API's hebt. Waarbij gesloten API's ook via een creditssysteem kunnen werken. Hierbij betaal 1 credit per actie van de API.
+
+                        </p>
+                    </div>
+                    
+                        <div id="map1" class="map-container"></div>
+                        
+                    
+                                      
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="les4" class="lesson-section">
+            <div class="container">
+                <h4>Geodesign</h4>
+                <h2>Les 4: (Geo) Design</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                            In de Geodesign les zijn we aan de slag gegaan met wat Geodata en design inhoudt en we werden gestimuleerd om zelf na te denken over onze systemen waar we in leven. 
+                            Wat me vooral opviel was de main-take-away van het document dat we moesten lezen 'Back to the drawing board' van Reitz in 2022.
+                            Omdat we weten door de vorige lessen, dat iedereen een eigen perspectief heeft op zijn of haar locatie stelt Reitz voor om samen met de gemeenschap een kaart te maken.
+                            Dit zou ervoor zorgen, dat er niet alleen geografisch kloppende kaarten worden gemaakt, maar ook dat de kaarten een verhaal vertellen over de mensen die er wonen.
+                            <br><br>
+                            Dit is een belangrijk punt, omdat het laat zien dat kaarten niet alleen een weergave zijn van geografische data, maar ook van de mensen die er wonen en werken.
+                            Of het nu platteland, een dorp of een stad is dat maakt niet uit. 
+                            <br><br>
+                            Verder, hebben we in de lessen wat foto's van de Houtribsluis opgezocht.
+                            
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/houtrib1.jpg" class="lesson-image">
+                        <img src="./img/houtrib2.webp" class="lesson-image">
+                        <img src="./img/hourib3.jpeg" class="lesson-image">
+                        <img src="./img/houtrib4.jpg" class="lesson-image">
+                    </div>
+                                     
+                </div>
+            </div>
+        </section>
+
+        <section id="les5" class="lesson-section">
+            <div class="container">
+                <h4>Vormgeving</h4>
+                <h2>Les 5: Van Bertin tot Gestalt en visuele variablen</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                           
+                            De vijfde les richtte zich op vormgeving en cartografisch design. We leerden over de principes van Bertin, gestalt die effectieve kaartontwerpen versterken. En hoe  kleur, contrast en compositie de leesbaarheid en impact van onze kaarten beïnvloeden. Niene benadrukte het belang van doelgroepgericht ontwerpen.
+                            Ook hebben we het gehad over data classificatie. 
+                            
+                            Dit was vooral een theorieles, waar ik heb geleerd over Bertin en zijn principes. En de samenwerking met meetniveaus.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/bertin.png" alt="Cartografisch design voorbeeld" class="lesson-image">
+                        <img src="./img/meetniveau.png" alt="Kleurgebruik in kaarten" class="lesson-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="les6" class="lesson-section">
+            <div class="container">
+                <h4>Vormgeving</h4>
+                <h2>Les 6: UX/IX design voor kaarten & API's met JavaScript</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                            De zesde les was mijn favoriete les, waar we dieper op gebruikerservaring en interfaces zijn ingegaan. 
+                            Ondanks dat we al eens een vak hebben gehad voor UI/UX design in het algemeen, waren deze lessen een ontzettende gaaf vervolg omdat we ook kennis
+                            toe hebben gepast van vorige lessen. Er kwamen zoveel handige tips voorbij, dat als dit een cursus was ik deze graag zou willen doen.
+                            <br><br>
+                            Een aantal van deze tips waren:
+                            Less is more. De gebruikersmotivatie en complexiteit moeten een middelpunt vinden om succes te vinden, omdat bij teveel complexiteit de gebruiker
+                            afhaakt en bij te weinig complexiteit de gebruiker zich verveelt. Hetzelfde geldt voor de motivatie, als de gebruiker niet gemotiveerd is verlies je snel de aandacht.
+                            Daarom moet als je klikt, ook een actie gebeuren. Bijvoorbeeld die typische ArcGIS webmap kaarten waarbij de lagen niet zichtbaar zijn,
+                            als je niet inzoomt. Dit is te complex voor nieuwe gebruikers buiten het vakgebied.
+                            <br><br>
+                            Een ander punt was, dat je de gebruiker moet laten zien wat hij kan manipuleren. Met dit punt geef je de gebruiker een gevoel van controle geeft. En als je hem de juiste functionaliteiten
+                            geeft kan hij zelf de kaart manipuleren naar wens. Hierbij speelt gestalt weer een rol, omdat dingen die bij elkaar horen vaak niet bij elkaar worden gezet. Een veelgemaakte fout op het web.
+                            <br><br>
+                            Regenboogverlopen moeten we absoluut niet te gebruiken in kaarten, omdat we het niet goed kunnen interpreteren.
+                            We denken dan het middelpunt van het verloop ergens anders ligt door onze associaties met kleuren, dus het is moeilijk om af te lezen.
+                            <br><br>
+                            'Kill your darling', behoud het nodige, zelfs als dit ten koste gaat van wat je hebt gemaakt.
+                            Een mooi voorbeeld hiervan is misschien de Pie charts van Microsoft Office. Er wordt veel gebruik van gemaakt, maar het menselijke brein 
+                            heeft veel moeite met het interpreteren van de grootte van de taartpunten. Dit komt omdat we de grootte van de hoek niet goed kunnen inschatten.
+                            Microsoft zou het dus veel beter kunnen maken door een andere visualisatie standaard aan te gebruiken, zoals een staafdiagram. Ookal is dit
+                            niet echt een Microsoft probleem, maar meer een eindgebruiker probleem. Maar zo voorkom je wel dat mensen het nog gaan gebruiken, door de optie
+                            weg te halen.
+                            <br><br>
+                            Heat maps zijn een gevaar, omdat onze ogen het anders opnemen als een objectieve schaal. Ook de dichtheid (agglomeratie) van kaarten kan een probleem zijn, hiermee bedoel ik bijvoorbeeld 2 punten die samengevoegd
+                            worden terwijl ze ver uit elkaar liggen. 
+                            <br><br>
+                            Mijn belangrijkste leerpunten van de les zelf zijn, dat kaarten steeds interactiever worden en we moeten nadenken over wat een gebruiker kan manipuleren en waarom.
+                            
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <img src="./img/Kankeratlas.png" class="lesson-image">
+                        <img src="./img/Should-I-use-a-pie-chart.png" class="lesson-image">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="les7" class="lesson-section">
+            <div class="container">
+                <h4>Webmapping</h4>
+                <h2>Les 7: Online les en relectie</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                            De laatste les was online en hierbij hebben we data op onze kaarten gezet, dit hebben we al eerder
+                            geprobeerd in les 3, maar dit was bij niemand nog echt goed gelukt. Dus hebben we de PDOK open API gebruikt
+                            om data op te halen en op onze kaarten te plaatsen. Hierdoor heb ik geleerd dat PDOK dus een gratis API heeft en dat het
+                            door de Nederlandse overheid beschikbaar wordt gesteld. Ik gebruik het al jaren, maar was dit vergeten.
+                            <br><br> 
+                            Dit is mijn uiteindelijke STARR-reflectie van het vak HGAV07 Geodesign wat ik heb mogen volgen onder docering van Niene Boeijen.<br>
+                            <br><b>Situatie</b><br>
+                            Tussen 4 februari en 18 maart 2025 volgde ik het vak HGAV07 Geodesign aan Aeres Hogeschool Almere, gegeven door invaldocent Niene Boeijen. In deze periode van zeven lessen leerde ik over thema’s zoals cartografie, webmapping, webontwikkeling en vormgeving. We werkten aan opdrachten zoals het opzoeken van definities, wireframes voor websites, en het gebruiken van API’s zoals PDOK om data op webkaarten te zetten. Het was een mix van theorie en praktijk, vaak met groepsgesprekken en individuele taken.
+                            <br><br><b>Taak</b><br>
+                            Mijn taak was om aan de leerdoelen te voldoen en de stof van elke les later te kunnen verwerken in mijn eigen portofolio website. Ik moest bijvoorbeeld artikelen lezen, een website ontwerpen, webkaarten maken met tools zoals Leaflet en MapLibre, en nadenken over hoe vormgeving (zoals Bertin en Gestalt) kaarten beter maakt. Het doel was om te leren wat Geo design inhoud en dit te laten zien in mijn portfolio-website.
+                            <br><br><b>Actie</b><br>
+                            Ik heb actief meegedaan aan alle lessen. Voor Les 1 maakte ik een Powerpoint met definities, en een tijdlijn van de Babylonische kaart tot GIS. In Les 2 oefende ik met HTML, CSS en JavaScript en schetste ik wireframes voor mijn website. In Les 3 en 7 werkte ik met API’s, zoals PDOK, om data op kaarten te zetten. In Les 4 leerder ik meerdere manieren om kaarten te interpreteren. In Les 5 en 6 leerde ik over vormgeving (Bertin, UX/IX) en paste ik tips toe, zoals “less is more” en geen regenboogverlopen gebruiken. Ik combineerde mijn voorkennis met nieuwe lesinhoud en probeerde alles te verwerken in deze portfolio-website.
+                            <br><br><b>Resultaat</b><br>
+                            Het resultaat was een portfolio-website waarin ik mijn werk van alle lessen liet zien. De tijdlijn uit Les 1 was een succes, al kon de legenda beter. Mijn wireframes en website-indeling (Les 2) waren goed doordacht, en in Les 7 lukte het eindelijk om PDOK-data op een kaart te krijgen, wat in Les 3 nog mislukte. De theorielessen (Les 5 en 6) gaven me nieuwe ideeën over design, zoals gebruikersvriendelijke kaarten maken. Soms waren mijn uitwerkingen niet perfect—zoals K.I.-beelden die ik niet goed integreerde—maar ik heb veel geleerd en Niene was tevreden met mijn inzet.
+                           <br><br><b>Reflectie</b><br>
+                            Deze periode leerde me dat Geodesign meer is dan alleen technische kaarten maken; het gaat om verhalen vertellen en mensen betrekken, zoals Reitz beschreef. Wat goed ging, was dat ik mijn voorkennis (bijv. van HTML en GIS) kon combineren met nieuwe skills, zoals API’s en UX-design. Les 6 over gebruikerservaring was mijn favoriet, omdat ik zag hoe kleine aanpassingen een kaart beter maken. Wat minder goed ging, was dat ik soms te snel werkte, zoals met de legenda in Les 1 of de eerste poging met API’s in Les 3. Volgende keer neem ik meer tijd om mijn werk af te maken en details te checken. Dit neem ik mee naar toekomstige projecten: goed plannen en altijd denken aan de gebruiker, zodat mijn kaarten niet alleen kloppen, maar ook echt iets betekenen.
+
+
+                        </p>
+                    </div>
+                    
+                </div>
+            </div><div id="map3" class="map-container"></div>
+            <div id="map2" class="map-container"></div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruben Kaptein - Portfolio Geodesign</p>
         </div>
-    </div>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
-    <script src="./javascript/javascript.js"></script>
-
-    <div id="Geodesign" class="section"><h1>Geodesign</h1><br><br><h3>Geodesign is een combinatie van GIS, plannen, designen en beleid in het ruimtelijke domein wat vaak kaarten maken betekent. Kaartenmaken heeft te maken met data, visualiseren en locaties.<br><br>
-        Je kan het onderverdelen in 3 categorieën: 1. kaart  2. visualisatie 3. data
-        Mensen interpreteren kaarten op basis van eigen ervaringen en historie
-        K.I. geeft kleurrijke plaatjes met veel details, hij ziet geodesigners en het vak van kaartenmaken als een iets meer
-         verouderde wetenschap, maar onderwerpen als kunst, visualisaties en 3D als springlevend vol futuristische beelden.
-        Denk na over de betrouwbaarheid van de antwoorden van kunstmatige intelligentie.
-    </h3>
-    <div id="fotoshoutribsluis"><img src="./img/1images.jpg"><img src="./img/2images.webp"><img src="./img/3images.jpeg"><img src="./img/4images.jpg"></div></div>
-
-    <footer class="footer">
-        <button>Optie 1</button>
-        <button>Optie 2</button>
-        <button>Optie 3</button>
     </footer>
+
+   
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    
+    <script src="./javascript/javascript.js"></script>
+    <script>function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }</script>
 </body>
 </html>
