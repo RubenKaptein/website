@@ -40,74 +40,21 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  border-bottom: 3px solid var;
+  border-bottom: 3px solid var(--primary-color);
   padding-bottom: 10px;
   display: inline-block;
+  margin-bottom: 40px;
 }
 
-h4{
-color: cornflowerblue;
+h4 {
+  color: cornflowerblue;
 }
+
 p {
   margin-bottom: 20px;
 }
 
-
-.nav-container {
-display: flex;
-width: 100vw;
-height: 65vh;
-}
-
-.nav-item {
-flex: 1;
-position: relative;
-background-size: cover;
-background-position: center;
-transition: background-color 0.3s ease;
-text-decoration: none;
-}
-
-.nav-item .overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0);
-transition: background-color 0.3s ease;
-}
-
-.nav-item:hover .overlay {
-background-color: rgba(0, 0, 0, 0.5);
-}
-
-.nav-item button {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-padding: 10px 20px;
-background-color: rgba(0, 0, 0, 0.7);
-color: white;
-border: none;
-cursor: pointer;
-font-size: 16px;
-transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-item:hover button {
-background-color: transparent;
-color: white;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Header and Navigation */
 header {
   background-color: var(--dark-color);
   position: sticky;
@@ -150,7 +97,7 @@ header {
   background-color: var(--primary-color);
 }
 
-
+/* Intro Section */
 .intro-section {
   background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: white;
@@ -170,7 +117,72 @@ header {
   font-size: 1.2rem;
 }
 
+/* Pages Grid Section */
+.pages-grid-section {
+  padding: var(--section-padding);
+  background-color: var(--background-color);
+}
 
+.pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.page-card {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.page-card:hover .card-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.card-content h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  color: #e0e0e0;
+  margin-bottom: 0;
+}
+
+/* Lesson Section */
 .lesson-section {
   padding: var(--section-padding);
   border-bottom: 1px solid #eee;
@@ -204,6 +216,15 @@ header {
   max-width: 100%;
   object-fit: cover;
   height: 350px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .map-container {
@@ -214,7 +235,23 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Back to Home Button */
+.back-to-home {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
 
+.back-to-home:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Footer */
 footer {
   background-color: var(--dark-color);
   color: white;
@@ -223,68 +260,97 @@ footer {
   margin-top: 50px;
 }
 
-
-@media (min-width: 768px) {
-  .lesson-content {
-      flex-direction: row;
-  }
-  
-  .text-block {
-      flex: 2;
-  }
-  
-  .image-container {
-      flex: 3;
-  }
-}
-
-@media (max-width: 767px) {
-  #main-nav {
-      flex-direction: column;
-  }
-  
-  .nav-links {
-      margin-top: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  
-  .nav-links li {
-      margin: 5px;
-  }
-  
-  h1 {
-      font-size: 2rem;
-  }
-  
-  h2 {
-      font-size: 1.5rem;
-  }
-  
-  .intro-section {
-      padding: 80px 0 40px;
-  }
-  
-  .lesson-section {
-      padding: 50px 0;
-  }
-  
-  .lesson-image {
-      max-width: 100%;
-  }
-}
-
-
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.intro-content, .lesson-content {
+.intro-content, .lesson-content, .page-card {
   animation: fadeIn 0.8s ease-out;
 }
 
-
 html {
   scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .lesson-content {
+    flex-direction: row;
+  }
+  
+  .text-block {
+    flex: 2;
+  }
+  
+  .image-container {
+    flex: 3;
+  }
+
+  .pages-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  #main-nav {
+    flex-direction: column;
+  }
+  
+  .nav-links {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links li {
+    margin: 5px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .intro-section {
+    padding: 80px 0 40px;
+  }
+  
+  .lesson-section {
+    padding: 50px 0;
+  }
+  
+  .lesson-image {
+    max-width: 100%;
+  }
+
+  .pages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-card {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-card {
+    height: 200px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
 }

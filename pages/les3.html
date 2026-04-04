@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les 3: Web Maps - Portfolio Ruben Kaptein</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="main-nav">
+            <div class="logo">Ruben Kaptein</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="les1.html">Les 1</a></li>
+                <li><a href="les2.html">Les 2</a></li>
+                <li><a href="les3.html">Les 3</a></li>
+                <li><a href="les4.html">Les 4</a></li>
+                <li><a href="les5.html">Les 5</a></li>
+                <li><a href="les6.html">Les 6</a></li>
+                <li><a href="les7.html">Les 7</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lesson-section">
+            <div class="container">
+                <a href="../index.html" class="back-to-home">← Terug naar Home</a>
+                <h4>Webmapping</h4>
+                <h2>Les 3: Web Maps</h2>
+                <div class="lesson-content">
+                    <div class="text-block">
+                        <p>
+                            In de derde les zijn we bezig geweest met webmapping. We hebben webkaarten van MapLibre en Leaflet uitgeprobeerd. Het meest waardevolle wat ik hier mocht leren van Niene is hoe API's werken.
+                            <br><br>
+                            Blijkbaar is de API een manier om met een server te praten en als hij terugpraat, kan je dat gebruiken om informatie op te halen van de server en te tonen op je website. Ook belangrijk is, dat je dus openbare en gesloten API's hebt. Waarbij gesloten API's ook via een creditssysteem kunnen werken. Hierbij betaal 1 credit per actie van de API.
+                            <br><br>
+                            In deze les hebben we geëxperimenteerd met verschillende kaartbibliotheken en leerden we hoe we interactieve kaarten kunnen inbedden in webpagina's. Dit opende een hele nieuwe wereld van mogelijkheden voor het visualiseren van geografische data op het web.
+                        </p>
+                    </div>
+                </div>
+                <div id="map1" class="map-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ruben Kaptein - Portfolio Geodesign</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        const map1 = L.map('map1').setView([52.6646, 5.6014], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map1);
+        L.marker([52.6646, 5.6014]).addTo(map1)
+            .bindPopup('Urk, het mooiste vissersdorp')
+            .openPopup();
+    </script>
+</body>
+</html>
